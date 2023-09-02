@@ -174,5 +174,83 @@ fruits.forEach(function (fruit) {
   console.log(fruit.toUpperCase()); // prints the element in uppercase
 });
 ```
+---
+# How to Use JavaScript in HTML Documents
 
-This is the end of the tutorial on basic syntax and data types of JavaScript. We hope you learned something useful from it. 😊
+JavaScript is a scripting language that can run in web browsers and other environments. It can be used to create dynamic and interactive web pages, as well as other applications. In this tutorial, we will learn how to use JavaScript in HTML documents, such as using the `<script>` tag, linking external JavaScript files, using the `document` object, etc.
+
+## The `<script>` Tag
+
+The `<script>` tag is used to embed JavaScript code in an HTML document. The `<script>` tag can be placed anywhere in the HTML document, but it is usually placed in the `<head>` or the `<body>` section. The `<script>` tag has two attributes: `src` and `type`. The `src` attribute is used to specify the URL of an external JavaScript file. The `type` attribute is used to specify the MIME type of the script. The default value is `text/javascript`. For example:
+
+```html
+<head>
+  <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    // write your JavaScript code here
+  </script>
+</body>
+```
+
+The `<script>` tag can also have a `defer` or an `async` attribute. The `defer` attribute tells the browser to execute the script after the HTML document has been parsed. The `async` attribute tells the browser to execute the script asynchronously as soon as it is available. These attributes are useful for improving the performance and user experience of the web page. For example:
+
+```html
+<head>
+  <script src="script1.js" type="text/javascript" defer></script>
+  <script src="script2.js" type="text/javascript" async></script>
+</head>
+```
+
+## Linking External JavaScript Files
+
+Linking external JavaScript files is a good practice for organizing and maintaining your code. It also allows you to reuse your code across multiple web pages. To link an external JavaScript file, you need to use the `<script>` tag with the `src` attribute. The value of the `src` attribute should be the URL of the JavaScript file. For example:
+
+```html
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+```
+
+This example links to the jQuery library from a CDN (Content Delivery Network). A CDN is a network of servers that deliver content to users based on their geographic location. Using a CDN can improve the speed and reliability of your web page.
+
+You can also link to local JavaScript files that are stored in your own server or computer. For example:
+
+```html
+<head>
+  <script src="js/script.js"></script>
+</head>
+```
+
+This example links to a JavaScript file named `script.js` that is located in a folder named `js` in the same directory as the HTML document.
+
+## Using the `document` Object
+
+The `document` object is a built-in object that represents the current HTML document. It provides various properties and methods that can be used to access and manipulate the elements and content of the document. For example:
+
+```javascript
+console.log(document.title); // prints the title of the document
+console.log(document.URL); // prints the URL of the document
+console.log(document.body); // prints the body element of the document
+document.write("Hello, world!"); // writes "Hello, world!" to the document
+document.getElementById("demo"); // returns the element with id="demo"
+document.getElementsByTagName("p"); // returns a collection of all <p> elements
+document.getElementsByClassName("example"); // returns a collection of all elements with class="example"
+document.querySelector("#demo"); // returns the first element that matches the CSS selector "#demo"
+document.querySelectorAll(".example"); // returns a collection of all elements that match the CSS selector ".example"
+```
+
+The `document` object also has some events that can be used to trigger functions when certain actions occur in the document. For example:
+
+```javascript
+document.onload = function () {
+  // this function will run when the document is fully loaded
+  console.log("The document is ready!");
+};
+document.onclick = function () {
+  // this function will run when the document is clicked
+  console.log("The document is clicked!");
+};
+```
+This is the end of the tutorial. We hope you learned something useful from it. 😊
