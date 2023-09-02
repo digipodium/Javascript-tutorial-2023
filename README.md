@@ -175,4 +175,4 @@ fruits.forEach(function (fruit) {
 });
 ```
 
-This is the end of the tutorial on basic syntax and data types of JavaScript. I hope you learned something useful from it. 😊
+This is the end of the tutorial on basic syntax and data types of JavaScript. We hope you learned something useful from it. 😊
